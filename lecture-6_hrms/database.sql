@@ -42,7 +42,7 @@ CREATE TABLE public.job_seekers
     user_id integer NOT NULL,
     first_name character varying NOT NULL,
     last_name character varying NOT NULL,
-    national_id bigint NOT NULL,
+    national_id character varying NOT NULL,
     birth_of_date date NOT NULL,
     PRIMARY KEY (user_id)
 )
