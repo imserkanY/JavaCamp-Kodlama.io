@@ -42,6 +42,36 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	      	<groupId>org.primefaces</groupId>
+	      	<artifactId>primefaces</artifactId>
+	      	<version>10.0.0</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.sun.faces</groupId>
+	      <artifactId>jsf-impl</artifactId>
+	      <version>2.2.20</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.sun.faces</groupId>
+	      <artifactId>jsf-api</artifactId>
+	      <version>2.2.20</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>javax.enterprise</groupId>
+	      <artifactId>cdi-api</artifactId>
+	      <version>1.2</version>
+	    </dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.9.2</version>
+		</dependency>	    
 	</dependencies>
 
 	<build>
