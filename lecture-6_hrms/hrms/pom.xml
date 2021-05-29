@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>kodlama.io</groupId>
+	<groupId>kodlamaio</groupId>
 	<artifactId>hrms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hrms</name>
-	<description>HRMS for kodlama.io</description>
+	<description>Codedby-imserkanY</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -38,30 +38,15 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-	      	<groupId>org.primefaces</groupId>
-	      	<artifactId>primefaces</artifactId>
-	      	<version>10.0.0</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.sun.faces</groupId>
-	      <artifactId>jsf-impl</artifactId>
-	      <version>2.2.20</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.sun.faces</groupId>
-	      <artifactId>jsf-api</artifactId>
-	      <version>2.2.20</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>javax.enterprise</groupId>
-	      <artifactId>cdi-api</artifactId>
-	      <version>1.2</version>
-	    </dependency>
 		<dependency>
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger2</artifactId>
@@ -71,7 +56,7 @@
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger-ui</artifactId>
 		    <version>2.9.2</version>
-		</dependency>	    
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -79,6 +64,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
