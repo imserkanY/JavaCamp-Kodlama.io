@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import kodlamaio.hrms.business.abstracts.UserService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
-import kodlamaio.hrms.core.utilities.results.SuccesDataResult;
+import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.UserDao;
 import kodlamaio.hrms.entities.concretes.User;
@@ -27,7 +27,7 @@ public class UserManager implements UserService{
 
 	@Override
 	public DataResult<List<User>> getAll() {
-			return new SuccesDataResult<List<User>>( userDao.findAll(),"Data eklendi");
+			return new SuccessDataResult<List<User>>( userDao.findAll(),"User eklendi");
 	}
 
 	@Override

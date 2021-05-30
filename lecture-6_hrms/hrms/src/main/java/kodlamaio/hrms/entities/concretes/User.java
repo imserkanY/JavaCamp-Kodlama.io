@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="id")
@@ -31,4 +33,10 @@ public class User {
 	
 	@Column(name ="verified_email")
 	private boolean verifiedEmail;
+	
+	public User(String email, String password, boolean verifiedEmail) {
+		this.email = email;
+		this.password = password;
+		this.verifiedEmail = verifiedEmail;
+	}
 }

@@ -13,6 +13,7 @@ import kodlamaio.hrms.business.abstracts.EmployerService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Employer;
+import kodlamaio.hrms.entities.concretes.dtos.EmployerDto;
 
 @RestController
 @RequestMapping("/api/employers")
@@ -31,9 +32,7 @@ public class EmployerController {
 	}
 	
 	@PostMapping("/register")
-	public Result register(@RequestBody Employer employer) {
+	public Result register(@RequestBody EmployerDto employer) {
 		return this.employerService.register(employer);
 	}
-	
-
 }

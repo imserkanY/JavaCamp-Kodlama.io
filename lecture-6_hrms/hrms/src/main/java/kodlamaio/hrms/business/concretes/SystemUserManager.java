@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.SystemUserService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
-import kodlamaio.hrms.core.utilities.results.SuccesDataResult;
+import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.dataAccess.abstracts.SystemUserDao;
 import kodlamaio.hrms.entities.concretes.SystemUser;
 
@@ -24,7 +24,7 @@ public class SystemUserManager implements SystemUserService {
 
 	@Override
 	public DataResult<List<SystemUser>> getAll() {
-		return new SuccesDataResult<List<SystemUser>>( systemUserDao.findAll(),"Data eklendi");
+		return new SuccessDataResult<List<SystemUser>>( systemUserDao.findAll(),"Personel eklendi");
 	}
 
 }

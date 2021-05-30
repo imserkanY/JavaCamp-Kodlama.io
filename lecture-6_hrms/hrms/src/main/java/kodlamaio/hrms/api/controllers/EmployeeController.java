@@ -14,6 +14,7 @@ import kodlamaio.hrms.business.abstracts.EmployeeService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Employee;
+import kodlamaio.hrms.entities.concretes.dtos.EmployeeDto;
 
 
 @RestController
@@ -33,7 +34,7 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/register")
-	public Result register(@RequestBody Employee employee) {
+	public Result register(@RequestBody EmployeeDto employee) {
 		return this.employeeService.register(employee);
 	}
 	
