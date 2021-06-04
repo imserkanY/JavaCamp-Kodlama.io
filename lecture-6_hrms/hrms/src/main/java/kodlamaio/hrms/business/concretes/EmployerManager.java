@@ -14,7 +14,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.EmployerDao;
 import kodlamaio.hrms.entities.concretes.Employer;
 import kodlamaio.hrms.entities.concretes.User;
-import kodlamaio.hrms.entities.concretes.dtos.EmployerDto;
+import kodlamaio.hrms.entities.dtos.EmployerDto;
 
 
 @Service

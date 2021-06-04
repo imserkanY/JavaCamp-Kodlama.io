@@ -12,6 +12,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobAdvertisementDao;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
 @Service
 public class JobAdvertisementManager implements JobAdvertisementService {
@@ -26,18 +27,18 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	
 
 	@Override
-	public DataResult<List<JobAdvertisement>> findByActivityStatus() {
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findByActivityStatus(true));
+	public DataResult<List<JobAdvertisementDto>> findByActivityStatus() {
+		return new SuccessDataResult<List<JobAdvertisementDto>>(this.jobAdvertisementDao.findByActivityStatus(true));
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> findByActivityStatusAndApplicationDeadline() {
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findByActivityStatusOrderByApplicationDeadline(true));
+	public DataResult<List<JobAdvertisementDto>> findByActivityStatusAndApplicationDeadline() {
+		return new SuccessDataResult<List<JobAdvertisementDto>>(this.jobAdvertisementDao.findByActivityStatusOrderByApplicationDeadline(true));
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> findByActivityStatusAndCompanyName(String companyName) {
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findByActivityStatusAndEmployer_CompanyName(true,companyName));
+	public DataResult<List<JobAdvertisementDto>> findByActivityStatusAndCompanyName(String companyName) {
+		return new SuccessDataResult<List<JobAdvertisementDto>>(this.jobAdvertisementDao.findByActivityStatusAndEmployer_CompanyName(true,companyName));
 	}
 	
 	@Override
@@ -51,6 +52,5 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		this.jobAdvertisementDao.delete(jobAdvertisement);
 		return new SuccessResult("İş ilani silme başarılı");
 	}
-
 
 }

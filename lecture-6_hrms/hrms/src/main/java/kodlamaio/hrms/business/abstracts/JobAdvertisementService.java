@@ -5,14 +5,15 @@ import java.util.List;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
 public interface JobAdvertisementService {
 
-	DataResult<List<JobAdvertisement>> findByActivityStatus();
+	DataResult<List<JobAdvertisementDto>> findByActivityStatus();
 
-	DataResult<List<JobAdvertisement>> findByActivityStatusAndApplicationDeadline();
+	DataResult<List<JobAdvertisementDto>> findByActivityStatusAndApplicationDeadline();
 
-	DataResult<List<JobAdvertisement>> findByActivityStatusAndCompanyName(String companyName);
+	DataResult<List<JobAdvertisementDto>> findByActivityStatusAndCompanyName(String companyName);
 	
 	Result add(JobAdvertisement jobAdvertisement);
 
