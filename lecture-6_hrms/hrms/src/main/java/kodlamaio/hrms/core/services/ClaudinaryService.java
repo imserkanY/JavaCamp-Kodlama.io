@@ -26,7 +26,7 @@ public class ClaudinaryService implements CloudService{
 		valuesMap.put("api_secret", "YFTufZaT5YjX8DkJXF3wJDbpaX8");
 		cloudinary = new Cloudinary(valuesMap);
 	}
-	public Map upload(MultipartFile multipartFile) throws IOException {
+	public Map add(MultipartFile multipartFile) throws IOException {
 		
 		File file = new File(multipartFile.getOriginalFilename());
 		FileOutputStream stream = new FileOutputStream(file);

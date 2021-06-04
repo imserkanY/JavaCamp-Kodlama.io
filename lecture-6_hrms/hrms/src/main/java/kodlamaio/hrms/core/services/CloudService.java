@@ -6,5 +6,5 @@ import java.util.Map;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface CloudService {
-	Map upload(MultipartFile multipartFile) throws IOException;
+	Map add(MultipartFile multipartFile) throws IOException;
 }

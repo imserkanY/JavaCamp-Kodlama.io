@@ -34,9 +34,6 @@ public class EmployeeResume {
 	@Column(name = "linkedin_url")
 	private String linkedinUrl;	
 	
-	@Column(name = "image_url")
-	private String imageUrl;
-	
 	@ManyToOne()
 	@JoinColumn(name="employee_id")
 	private Employee employee;
@@ -55,5 +52,8 @@ public class EmployeeResume {
 	
 	@OneToMany(mappedBy = "employeeResumes")
 	private List<TechSkill> techSkill;
+
+	@OneToMany(mappedBy = "employeeResumes")
+	private List<Photo> photo;
 	
 }

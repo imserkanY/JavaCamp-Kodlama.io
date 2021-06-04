@@ -9,29 +9,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlamaio.hrms.business.abstracts.EducationService;
+import kodlamaio.hrms.business.abstracts.PhotoService;
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
-import kodlamaio.hrms.entities.concretes.Education;
+import kodlamaio.hrms.entities.concretes.Photo;
+
 
 @RestController
-@RequestMapping("/api/educations")
-public class EducationsController {
+@RequestMapping("/api/photos")
+public class PhotosController {
 	
-	private EducationService educationService;
+	private PhotoService photoService;
 	
 	@Autowired
-	public EducationsController(EducationService educationService) {
-		super();
-		this.educationService = educationService;
+	public PhotosController(PhotoService photoService) {
+		this.photoService = photoService;
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestBody Education education) {
-		return this.educationService.add(education);
+	public Result add(@RequestBody Photo photo) {
+		return this.photoService.add(photo);
 	}
+
+		
 	@GetMapping("/getall")
-	public DataResult<List<Education>> getAll(){
-		return this.educationService.getAll();
+	public DataResult<List<Photo>> getAll(){
+		return this.photoService.getAll();
 	}
 }
